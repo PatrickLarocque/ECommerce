@@ -43,7 +43,6 @@ const ShoppingList = () => {
   );
 
   return (
-    <Provider>
     <Box width="80%" margin="80px auto">
       <Typography variant="h3" textAlign="center">
         Our Featured <b>Products</b>
@@ -93,7 +92,6 @@ const ShoppingList = () => {
           ))}
       </Box>
     </Box>
-    </Provider>
   );
 };
 
