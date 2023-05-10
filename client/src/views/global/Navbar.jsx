@@ -6,7 +6,7 @@ import {
   MenuOutlined,
   SearchOutlined,
 } from "@mui/icons-material";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { shades } from "../../theme";
 import { setIsCartOpen } from "../../state";
 
@@ -36,7 +36,7 @@ function Navbar() {
         alignItems="center"
       >
         <Box
-          onClick={() => navigate("/")}
+          onClick={() => navigate("/", {replace: true})}
           sx={{ "&:hover": { cursor: "pointer" } }}
           color={shades.secondary[500]}
           fontSize="large"

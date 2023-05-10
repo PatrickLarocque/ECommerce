@@ -2,7 +2,7 @@ import React from 'react'
 import { Box, Button, IconButton, Typography } from "@mui/material";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Item from "../../components/Item";
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
@@ -19,6 +19,7 @@ const ItemDetails = () => {
   const [count, setCount] = useState(1);
   const [item, setItem] = useState(null);
   const [items, setItems] = useState([]);
+  const navigate = useNavigate();
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -107,6 +108,19 @@ const ItemDetails = () => {
               onClick={() => dispatch(addToCart({ item: { ...item, count } }))}
             >
               ADD TO CART
+            </Button>
+            <Button
+              sx={{
+                margin: "0px 0px 0px 20px",
+                backgroundColor: "#222222",
+                color: "white",
+                borderRadius: 0,
+                minWidth: "150px",
+                padding: "10px 40px",
+              }}
+              onClick={() => navigate("/customizer", {replace: true})}
+            >
+              CUSTOMIZE IT
             </Button>
           </Box>
           <Box>

@@ -1,3 +1,4 @@
+import { red } from "@mui/material/colors";
 import { createTheme } from "@mui/material/styles";
 
 export const shades = {
@@ -13,15 +14,16 @@ export const shades = {
     900: "#000000",
   },
   secondary: {
-    100: "#f7ccd2",
-    200: "#ef99a4",
-    300: "#e66677",
-    400: "#de3349",
-    500: "#d6001c",
-    600: "#ab0016",
-    700: "#800011",
-    800: "#56000b",
-    900: "#2b0006",
+    50: '#F8EBE4',
+    100: '#F2D7CC',
+    200: '#E5AC9C',
+    300: '#D87B6C',
+    400: '#CB463B',
+    500: '#9F2A2A',
+    600: '#83232A',
+    700: '#661B26',
+    800: '#4A1420',
+    900: '#2E0C16'
   },
   neutral: {
     100: "#f5f5f5",
